@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: 0.2s;
+}
+
+body {
+  font-size: 2.3vh;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: #fff; /* Color de fondo claro */
+  color: #000; /* Color de texto oscuro */
+}
+
+body.night-mode {
+  background-color: #000; /* Color de fondo oscuro */
+  color: #fff; /* Color de texto claro */
+}
+
+nav {
+  width: 100%;
+  padding: 2vh;
+  display: block;
+}
+
+.boton {
+    padding: 1vh;
+    text-decoration-line: none;
+    font-size: 2vh;
+    cursor: pointer;
+    border-right: 1px solid grey;
+  }
+
+.boton:hover {
+  font-size: 1em;
+  font-weight: 300;
+}
+
+.modal {
+    text-align: center;
+    padding: 10px 20px 10px 20px;
+    border-color: rgb(88, 88, 88);
+    border-style: solid;
+    border-radius: 10px;
+    background-color: #ffffff;
+  }
+
+  /* Estilo del botón del Modal al pasar el ratón por encima */
+  .modal:hover {
+    border-color: whitesmoke;
+  }
+  
+  /* Estilo del texto en la pantalla al desplegar el Modal */
+  .textoModal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999999;
+    opacity: 0;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+  }
+  
+  /* Al ser targeteado el textoModal nos aparece el texto */
+  .textoModal:target {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  /* Estilo del texto Modal */
+  .textoModal > div {
+    width: 300px;
+    text-align: center;
+    position: relative;
+    margin: 15% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+  }

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajustes</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <nav id="barraNav1">
+        <a id="barraNav2" class="boton" href="./LetraWarriors.xml" target="_blank">XML</a>
+        <a id="barraNav2" class="boton" href="./ajustes.html" target="_blank">Ajustes</a>
+        <a id="barraNav2" class="boton" href="./index.html" target="_blank">Inicio</a>
+        <a id="barraNav2" class="boton" href="./paginaAleatoria.html" target="_blank">PaginaAleatoria</a>
+        <a href="#botonModal" class="modal">Modal</a>
+
+    </nav>
+    <div id="botonModal" class="textoModal">
+        <div>
+            <a href="#botonCerrar" title="Cerrar" class="botonCerrar">X</a>
+            <h2>Hecho por Álvaro Gómez Rueda</h2>
+            <br />
+            <p>¡Cuidado este sitio web tiene un exceso de flow puedes quedarte ciego por ver semejante maravilla!
+        </div>
+    </div>
+    <button id="night-mode-btn" class="modal">Modo Nocturno</button>
+
+    <h2>Iniciar sesión</h2>
+    <form>
+      <label for="usuario">Usuario:</label>
+      <input type="text" id="usuario" required><br><br>  
+      <input type="button" value="Iniciar sesión" onclick="iniciarSesion()">
+      <input type="button" value="Cerrar sesión" onclick="cerrarSesion()">
+    </form>
+  
+    <div id="nombre-usuario"></div>
+  
+    <script src="script.js"></script>
+</body>
+
+</html>
