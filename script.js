@@ -24,11 +24,7 @@ window.addEventListener('load', function () {
 var nightModeBtn = document.getElementById('night-mode-btn');
 nightModeBtn.addEventListener('click', toggleNightMode);
 
-function text() {
-    var nombre = document.getElementById('nombre').value;
-    sessionStorage.setItem('nombre', nombre);
-    alert('Bienvenido' + nombre);
-}
+
 
 function iniciarSesion() {
     var usuario = document.getElementById("usuario").value;
@@ -43,10 +39,17 @@ function iniciarSesion() {
     }
 }
 
+function almacenarEnSessionStorage() {
+    var textoInput = document.getElementById('nombre-input').value;
+    sessionStorage.setItem('nombre', textoInput);
+    alert('Bienvenido '+textoInput);
+
+}
+
 function mostrarNombreUsuario() {
-    var nombreUsuario = localStorage.getItem("nombreUsuario");
+    var nombreUsuario = sessionStorage.getItem("nombre" || 'sin identificar');
     var nombreUsuarioElemento = document.getElementById("nombre-usuario");
-    nombreUsuarioElemento.innerHTML = nombreUsuario;
+    nombreUsuarioElemento.textContent = nombreUsuario;
 }
 
 // Mostrar el nombre del usuario si ya ha iniciado sesión anteriormente
@@ -57,7 +60,9 @@ function cerrarSesion() {
     limpiarNombreUsuario();
     alert("Sesión cerrada");
 }
+
 function limpiarNombreUsuario() {
     var nombreUsuarioElemento = document.getElementById("nombre-usuario");
     nombreUsuarioElemento.innerHTML = "";
 }
+

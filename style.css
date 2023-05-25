@@ -14,7 +14,7 @@ body {
 }
 
 body.night-mode {
-  background-color: #000; /* Color de fondo oscuro */
+  background-color: #2a2a2a; /* Color de fondo oscuro */
   color: #fff; /* Color de texto claro */
 }
 
