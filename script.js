@@ -37,10 +37,10 @@ function iniciarSesion() {
     if (!(usuario === "" || usuario === null)) {
         localStorage.setItem("nombreUsuario", usuario);
         mostrarNombreUsuario();
+        alert("Login con éxito")
     } else {
         alert("Credenciales inválidas, debes de insertar un nombre");
     }
-    alert("Login con éxito")
 }
 
 function mostrarNombreUsuario() {
